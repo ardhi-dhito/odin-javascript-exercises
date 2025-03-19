@@ -2,17 +2,15 @@ const sumAll = function(start, end) {
     let numberToSum = [];
     let result = 0;
 
-    if (start < 0 || end < 0){
+    // Cek validasi input user
+    if (
+        isNaN(start) || isNaN(end) ||
+        start < 0 || end < 0 || 
+        !Number.isInteger(start) || !Number.isInteger(end)
+    ){
         return 'ERROR';
     }
 
-    if (Number.isInteger(start) === false || Number.isInteger(end) === false) {
-        return 'ERROR';
-    }
-
-    if (isNaN(start) || isNaN(end)) {
-        return 'ERROR';
-    }
 
     if (start > end) {
         start = start + end;
