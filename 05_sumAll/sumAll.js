@@ -11,19 +11,14 @@ const sumAll = function(start, end) {
         return 'ERROR';
     }
 
-
     if (start > end) {
         start = start + end;
         end = start - end;
         start = start - end;
     }
 
-    for (i = start; i <= end; i++) {
-        numberToSum.push(i);
-    }
-
-    for (number of numberToSum) {
-        result = result + number;
+    for (i = start; i <= end; i++){
+        result = result + i;
     }
 
     return result;
